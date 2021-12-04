@@ -9,6 +9,6 @@ func SayHello(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprintf(w, "Hello World")
 }
 func main() {
-	http.HandleFunc("/hello", SayHello)
+	http.HandleFunc("/", SayHello)
 	http.ListenAndServe(":8080", nil)
 }
